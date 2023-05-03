@@ -118,7 +118,7 @@ export default function ProfileNumber ({ phone }: ProfileNumberProps) : JSX.Elem
   }
 
   return (
-    <div>
+    <React.Fragment>
       <KeyValueDisplay
         keyText={screenText.loginScreen.phoneNumber.title}
         valueText={phoneNumber ?? "LOADING"}
@@ -182,7 +182,7 @@ export default function ProfileNumber ({ phone }: ProfileNumberProps) : JSX.Elem
           )}
         </div>
       )}
-    </div>
+    </React.Fragment>
   )
 }
 

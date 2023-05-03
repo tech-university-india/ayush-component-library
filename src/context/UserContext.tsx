@@ -1,6 +1,6 @@
 "use client"
 import { GET_PROFILE, REGISTER_ROUTE } from "../common/constants"
-import {makeRequest} from "../utils/makeRequest"
+import {makeRequest} from "../utils/makeRequest/index"
 import { useRouter } from "next/router"
 import React, { useEffect } from "react"
 

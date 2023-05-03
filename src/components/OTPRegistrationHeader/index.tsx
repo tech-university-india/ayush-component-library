@@ -9,7 +9,7 @@ interface OTPRegistrationHeaderProps {
 
 function OTPRegistrationHeader ({ setFormData, disabled, formData }: OTPRegistrationHeaderProps) {
   return (
-    <div>
+    <React.Fragment>
       <TextBox placeholder="Aadhaar Number" disabled={true} text={formData.aadhaarNumber} onChange={() => {
         // do nothing
       }}/>
@@ -17,7 +17,7 @@ function OTPRegistrationHeader ({ setFormData, disabled, formData }: OTPRegistra
         Please enter mobile number you want to use with ABHA
       </p>
       <TextBox placeholder="Mobile Number" text={formData.mobileNumber} onChange={(e:ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, mobileNumber: e.target.value })} disabled={disabled}/>
-    </div>
+    </React.Fragment>
   )
 }
 

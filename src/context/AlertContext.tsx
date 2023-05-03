@@ -20,7 +20,7 @@ const AlertState = ({ children }: AlertStateProps) => {
 
   return (
     <AlertContext.Provider value={{ showAlert }}>
-      <>
+      <React.Fragment>
         <div className="absolute z-20 bottom-0 mx-10 left-0">
           {alertInfo && (
             <Alert
@@ -32,7 +32,7 @@ const AlertState = ({ children }: AlertStateProps) => {
         </div>
 
         {children}
-      </>
+      </React.Fragment>
 
     </AlertContext.Provider>
   )

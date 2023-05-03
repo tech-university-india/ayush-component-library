@@ -14,7 +14,7 @@ interface RegistrationFormProps {
 function RegisterForm ({ firstName, middleName, lastName, setFormData, formData, setHealthId }: RegistrationFormProps) : JSX.Element | null {
   // const router = useRouter()
   return (
-    <div>
+    <React.Fragment>
       <div className="mt-10">
         <TextBox placeholder="First Name" disabled={true} text={firstName}
           onChange={() => {
@@ -44,7 +44,7 @@ function RegisterForm ({ firstName, middleName, lastName, setFormData, formData,
         <TextBox placeholder="Health ID" partialText=".ayush@sbx" onChange={(e:ChangeEvent<HTMLInputElement>) => setHealthId(e.target.value)} />
 
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 

@@ -2,7 +2,7 @@ import React from "react"
 import Loading from "../Loading"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faQrcode } from "@fortawesome/free-solid-svg-icons"
-import {makeRequest} from "../../utils/makeRequest"
+import {makeRequest} from "../../utils/makeRequest/index"
 import { GET_PROFILE_QR } from "../../common/constants"
 import { useAlert } from "../../context/AlertContext"
 

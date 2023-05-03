@@ -23,7 +23,7 @@ function TextBox ({ onChange, placeholder, disabled, noBg, partialText, text, ty
     : (partialText?.length * (partialText?.startsWith(".") ? PAD_PARTIAL_TEXT_DOT : PAD_PARTIAL_TEXT_NO_DOT))}rem`
 
   return (
-    <div>
+    <React.Fragment>
       {partialText !== undefined
         ? <div className="relative">
           <input type={type} disabled={disabled}
@@ -48,7 +48,7 @@ function TextBox ({ onChange, placeholder, disabled, noBg, partialText, text, ty
           value={text}
           maxLength={maxLength}
         />}
-    </div>
+    </React.Fragment>
   )
 }
 
