@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionTitleDisplay should render the component with expandability when it is collapsed 1`] = `
+<DocumentFragment>
+  <div
+    class="p-3 flex flex-row bg-options justify-between items-center border border-gray-100"
+  >
+    <span
+      class="drop-shadow-none text-2xl font-light"
+    >
+      Section Title
+    </span>
+    <div
+      class="flex flex-row justify-end items-center"
+    >
+      <button
+        class="pl-2 bg-transparent"
+        id="collapseBtn"
+      >
+        <img
+          alt="Expand"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SectionTitleDisplay should render the component with expandability when it is expanded 1`] = `
+<DocumentFragment>
+  <div
+    class="p-3 flex flex-row bg-options justify-between items-center border border-gray-100"
+  >
+    <span
+      class="drop-shadow-none text-2xl font-light"
+    >
+      Section Title
+    </span>
+    <div
+      class="flex flex-row justify-end items-center"
+    >
+      <button
+        class="pl-2 bg-transparent"
+        id="collapseBtn"
+      >
+        <img
+          alt="Collapse"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SectionTitleDisplay should render the component without expandability 1`] = `
+<DocumentFragment>
+  <div
+    class="p-3 flex flex-row bg-options justify-between items-center border border-gray-100"
+  >
+    <span
+      class="drop-shadow-none text-2xl font-light"
+    >
+      Section Title
+    </span>
+    <div
+      class="flex flex-row justify-end items-center"
+    />
+  </div>
+</DocumentFragment>
+`;
