@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OTPRegistrationHeader should render correctly 1`] = `
+<DocumentFragment>
+  <input
+    class="disabled:text-preFillText p-3 w-full rounded-lg shadow-textBoxInset bg-textBox"
+    disabled=""
+    placeholder="Aadhaar Number"
+    type="text"
+    value="1234567890"
+  />
+  <p
+    class="m-6 text-center"
+  >
+    Please enter mobile number you want to use with ABHA
+  </p>
+  <input
+    class="disabled:text-preFillText p-3 w-full rounded-lg shadow-textBox bg-textBox"
+    placeholder="Mobile Number"
+    type="text"
+    value=""
+  />
+</DocumentFragment>
+`;
