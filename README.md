@@ -13,7 +13,7 @@ npm install ayush-component-library
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'ayush-component-library'
+import { MyComponent } from 'ayush-component-library'
 import 'ayush-component-library/dist/index.css'
 
 class Example extends Component {
@@ -22,6 +22,27 @@ class Example extends Component {
   }
 }
 ```
+
+## Components
+
+Alert\
+Button\
+CustomButton\
+DropDownBox\
+Dropdown\
+Header\
+KeyValueDisplay\
+Loading\
+OTPInput\
+OTPRegistrationHeader\
+ProfileNumber\
+QRModal\
+Radio\
+RegisterForm\
+ResendOTPButton\
+SectionTitleDisplay\
+TextBox\
+UpdateButtons\
 
 ## License
 
