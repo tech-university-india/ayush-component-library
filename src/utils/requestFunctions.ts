@@ -1,5 +1,5 @@
 import { FORGOT_ABHA_INIT, FORGOT_ABHA_RESEND, FORGOT_ABHA_VERIFY } from "../common/constants"
-import {makeRequest} from "./makeRequest/index.ts"
+import {makeRequest} from "./makeRequest"
 
 async function generateOtp (credentials : any, type : any) : Promise<any> {
   const { data } = await makeRequest(FORGOT_ABHA_INIT, {

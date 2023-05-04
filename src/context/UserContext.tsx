@@ -1,7 +1,6 @@
 "use client"
 import { GET_PROFILE, REGISTER_ROUTE } from "../common/constants"
 import {makeRequest} from "../utils/makeRequest/index"
-import { useRouter } from "next/router"
 import React, { useEffect } from "react"
 
 
@@ -9,11 +8,12 @@ const UserContext = React.createContext<any>(null)
 
 interface UserStateProps {
   children: React.ReactNode
-  pageProps: any
+  pageProps: any,
+  useRouter: any
 }
 
 
-const UserState = ({ children, pageProps }: UserStateProps) => {
+const UserState = ({ children, pageProps, useRouter }: UserStateProps) => {
   const [user, setUser] = React.useState(null)
 
   async function fetchProfile(force?: boolean) {

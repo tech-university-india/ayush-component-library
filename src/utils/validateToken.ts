@@ -1,5 +1,5 @@
 import { VALIDATE_TOKEN } from "../common/constants"
-import {makeRequest} from "./makeRequest/index.ts"
+import {makeRequest} from "./makeRequest"
 
 export default async function validateToken () {
   const token = localStorage.getItem("token")

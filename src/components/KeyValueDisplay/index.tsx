@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import editSvg from "../../../public/edit.svg"
+import editSvg from '../../../public/edit.svg'
 
 /**
  * Key-value display component.
@@ -14,18 +14,27 @@ interface KeyValueDisplayProps {
   valueText: string
   onEditClick?: () => void
 }
-export default function KeyValueDisplay ({ keyText, valueText, onEditClick }: KeyValueDisplayProps) : JSX.Element | null {
-  return <div className="p-4 w-full flex flex-row border-opacity-5 justify-between items-center border border-gray-100 bg-white drop-shadow-keyValueDisplay">
-    <span className="drop-shadow-none">{keyText}</span>
-    <div className="flex flex-row justify-end items-center w-1/3">
-      <span className="drop-shadow-none lg:break-all">{valueText}</span>
-      {onEditClick &&
-        <button className="min-w-fit pl-2 bg-transparent" onClick={onEditClick}>
-          <img src={editSvg} alt="Edit" />
-        </button>
-      }
+export default function KeyValueDisplay({
+  keyText,
+  valueText,
+  onEditClick
+}: KeyValueDisplayProps): JSX.Element | null {
+  return (
+    <div className='p-4 w-full flex flex-row border-opacity-5 justify-between items-center border border-gray-100 bg-white drop-shadow-keyValueDisplay'>
+      <span className='drop-shadow-none'>{keyText}</span>
+      <div className='flex flex-row justify-end items-center w-1/3'>
+        <span className='drop-shadow-none lg:break-all'>{valueText}</span>
+        {onEditClick && (
+          <button
+            className='min-w-fit pl-2 bg-transparent'
+            onClick={onEditClick}
+          >
+            <img src={editSvg} alt='Edit' />
+          </button>
+        )}
+      </div>
     </div>
-  </div>
+  )
 }
 
 KeyValueDisplay.propTypes = {
