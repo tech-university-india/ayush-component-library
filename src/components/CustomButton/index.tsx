@@ -8,7 +8,8 @@ interface CustomButtonProps {
   testId?: string
   children: React.ReactNode
   className?: string
-  isSelected?: boolean
+  isSelected?: boolean,
+  disabled?: boolean
 }
 
 export default function CustomButton ({
@@ -16,7 +17,8 @@ export default function CustomButton ({
   testId,
   children,
   className = "bg-purple-500 text-white",
-  isSelected = false
+  isSelected = false,
+  disabled = false
 }: CustomButtonProps) : JSX.Element | null {
   const [loading, setLoading] = React.useState(false)
   async function handleOnClick (e : any) : Promise<void>{
@@ -27,8 +29,8 @@ export default function CustomButton ({
   return (
     <button
       data-testid={testId}
-      onClick={handleOnClick}
-      disabled={loading}
+      onClick={!disabled && handleOnClick}
+      disabled={loading || disabled}
       className={classNames(
         className,
         isSelected ? "shadow-selected" : "shadow-xl text-primaryButtonText",
