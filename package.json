@@ -1,6 +1,6 @@
 {
   "name": "ayush-component-library",
-  "version": "1.0.10",
+  "version": "1.1.16",
   "description": "A React Component Library",
   "author": "Kushagra Ved Nigam",
   "license": "MIT",
@@ -8,6 +8,7 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/components/index.tsx",
+  "types": "dist/src/components/index.d.ts",
   "engines": {
     "node": ">=10"
   },

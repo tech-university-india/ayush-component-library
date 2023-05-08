@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import classNames from "classnames"
-import Loading from "../Loading"
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import Loading from '../Loading'
 
 interface CustomButtonProps {
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | null
@@ -9,17 +9,19 @@ interface CustomButtonProps {
   children: React.ReactNode
   className?: string
   isSelected?: boolean
+  disabled?: boolean
 }
 
-export default function CustomButton ({
+export default function CustomButton({
   onClick,
   testId,
   children,
-  className = "bg-purple-500 text-white",
-  isSelected = false
-}: CustomButtonProps) : JSX.Element | null {
+  className = 'bg-purple-500 text-white',
+  isSelected = false,
+  disabled = false
+}: CustomButtonProps): JSX.Element | null {
   const [loading, setLoading] = React.useState(false)
-  async function handleOnClick (e : any) : Promise<void>{
+  async function handleOnClick(e: any): Promise<void> {
     setLoading(true)
     onClick && (await onClick(e))
     setLoading(false)
@@ -27,12 +29,12 @@ export default function CustomButton ({
   return (
     <button
       data-testid={testId}
-      onClick={handleOnClick}
-      disabled={loading}
+      onClick={disabled ? null : handleOnClick}
+      disabled={loading || disabled}
       className={classNames(
         className,
-        isSelected ? "shadow-selected" : "shadow-xl text-primaryButtonText",
-        "px-5 py-3 text-base font-light rounded-sm"
+        isSelected ? 'shadow-selected' : 'shadow-xl text-primaryButtonText',
+        'px-5 py-3 text-base font-light rounded-sm'
       )}
     >
       {loading ? <Loading size={14} /> : children}
