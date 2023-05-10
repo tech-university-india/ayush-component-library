@@ -44,9 +44,18 @@ function TextBox({
         <span className={'absolute block left-3 top-3 z-10 text-preFillText'}>
           {partialTextLeft}
         </span>
-
         <input
-          type={type}
+          onFocus={(event) => {
+            if (placeholder && type.includes('date')) {
+              event.target.type = type
+            }
+          }}
+          onBlur={(event) => {
+            if (placeholder && type.includes('date')) {
+              event.target.type = 'text'
+            }
+          }}
+          type={type.includes('date') ? 'text' : type}
           disabled={disabled}
           data-testid='partialText'
           className={`disabled:text-preFillText p-3 w-full rounded-lg ${
@@ -74,7 +83,17 @@ function TextBox({
       {partialText !== undefined ? (
         <div className='relative'>
           <input
-            type={type}
+            onFocus={(event) => {
+              if (placeholder && type.includes('date')) {
+                event.target.type = type
+              }
+            }}
+            onBlur={(event) => {
+              if (placeholder && type.includes('date')) {
+                event.target.type = 'text'
+              }
+            }}
+            type={type.includes('date') ? 'text' : type}
             disabled={disabled}
             data-testid='partialText'
             className={`disabled:text-preFillText p-3 w-full rounded-lg ${
@@ -104,7 +123,17 @@ function TextBox({
         </div>
       ) : (
         <input
-          type={type}
+          onFocus={(event) => {
+            if (placeholder && type.includes('date')) {
+              event.target.type = type
+            }
+          }}
+          onBlur={(event) => {
+            if (placeholder && type.includes('date')) {
+              event.target.type = 'text'
+            }
+          }}
+          type={type.includes('date') ? 'text' : type}
           disabled={disabled}
           className={`disabled:text-preFillText p-3 w-full rounded-lg ${
             disabled ? 'shadow-textBoxInset' : 'shadow-textBox'
