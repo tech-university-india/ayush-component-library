@@ -4,7 +4,9 @@ import classNames from 'classnames'
 import Loading from '../Loading'
 
 interface CustomButtonProps {
-  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void | null
+  onClick?: (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void | null | Promise<any> | Promise<void>
   testId?: string
   children: React.ReactNode
   className?: string
