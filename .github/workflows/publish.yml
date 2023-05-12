@@ -1,0 +1,30 @@
+name: Publish to npm
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to match your branch name
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14  # Adjust this to match your desired Node.js version
+
+      - name: Install dependencies
+        run: npm i -f
+
+      - name: Build library (if necessary)
+        run: npm run build  # Adjust this to match your build script
+
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}  # Set up your NPM_AUTH_TOKEN as a secret in your repository settings
