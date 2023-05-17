@@ -42,8 +42,8 @@ RegisterForm\
 ResendOTPButton\
 SectionTitleDisplay\
 TextBox\
-UpdateButtons\
+UpdateButtons
 
 ## License
 
-MIT © [Kushagra Ved Nigam](https://github.com/Kushagraved)
+MIT ©

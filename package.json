@@ -1,10 +1,10 @@
 {
-  "name": "ayush-component-library",
-  "version": "1.2.2",
+  "name": "@tech-university-india/ayush-component-library",
+  "version": "1.0.0",
   "description": "A React Component Library",
   "author": "Kushagra Ved Nigam",
   "license": "MIT",
-  "repository": "Kushagraved/kushu-lib-tailwind",
+  "repository": "tech-university-india/ayush-component-library",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/components/index.tsx",
