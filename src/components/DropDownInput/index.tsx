@@ -9,12 +9,14 @@ interface DropDownInputProps {
   initialOption: string
   options?: string[]
   noBg?: boolean
+  className?: string
 }
 export default function DropDownInput({
   onChange,
   initialOption,
   options,
-  noBg = false
+  noBg = false,
+  className = ''
 }: DropDownInputProps) {
   const [value, setValue] = React.useState(initialOption)
 
@@ -23,17 +25,16 @@ export default function DropDownInput({
       <select
         value={value}
         className={classNames(
+          className,
           noBg ? '' : 'bg-[#F2FEFF]',
-          'block appearance-none w-full p-3 rounded-lg   hover:border-gray-500 px-4 py-4 pr-8 shadow-textBox leading-tight focus:outline-none '
+          'block appearance-none w-full p-3 rounded-lg hover:border-gray-500 px-4 pr-8 shadow-textBox leading-tight focus:outline-none '
         )}
         onChange={(e) => {
           setValue(e.target.value)
-          onChange(e, setValue)
+          onChange && onChange(e, setValue)
         }}
       >
-        <option hidden>
-          {initialOption}
-        </option>
+        <option hidden>{initialOption}</option>
         {options?.map((option) => (
           <option key={option}>{option}</option>
         ))}
