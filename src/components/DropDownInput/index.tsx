@@ -9,20 +9,23 @@ interface DropDownInputProps {
   initialOption: string
   options?: string[]
   noBg?: boolean
-  className?: string
+  className?: string,
+  testId?: string
 }
 export default function DropDownInput({
   onChange,
   initialOption,
   options,
   noBg = false,
-  className = ''
+  className = '',
+  testId
 }: DropDownInputProps) {
   const [value, setValue] = React.useState(initialOption)
 
   return (
     <div className="relative">
       <select
+        data-testid={testId}
         value={value}
         className={classNames(
           className,
